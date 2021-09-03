@@ -11,17 +11,22 @@ import FLOPageViewController
 
 class ViewController: NSViewController {
     
-    fileprivate weak var pageViewController: PageViewController?
+    fileprivate weak var pageViewController: FLOPageViewController?
     
 // MARK: - NSViewController
     
     override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         
-        guard let pageViewController = segue.destinationController as? PageViewController else { return }
+        guard let pageViewController = segue.destinationController as? FLOPageViewController else { return }
+        
         let storyboard = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil)
+        
         pageViewController.loadViewControllers(["1", "2", "3"], from: storyboard)
+        
         self.pageViewController = pageViewController
+        
+        self.pageViewController?.delegate = self
     }
     
 // MARK: - Page View Controller Settings
@@ -56,6 +61,16 @@ class ViewController: NSViewController {
     
     @IBAction func didSelectBackgroundColor(_ sender: NSColorWell) {
         self.pageViewController?.backgroundColor = sender.color
+    }
+    
+}
+
+extension ViewController: FLOPageViewControllerDelegate {
+    
+    func pageViewController(_ pageViewController: FLOPageViewController, didSelectPage pageIndex: Int) {
+        
+        print("didSelectPage \(pageIndex)")
+        
     }
     
 }

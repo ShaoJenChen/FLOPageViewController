@@ -11,14 +11,14 @@ import Cocoa
 private let ArrowSize = NSSize(width: 20, height: 40)
 
 @objc(FLOPageViewControllerDelegate)
-public protocol PageViewControllerDelegate: class {
-    func pageViewController(_ pageViewController: PageViewController, didSelectPage pageIndex: Int)
+public protocol FLOPageViewControllerDelegate: class {
+    func pageViewController(_ pageViewController: FLOPageViewController, didSelectPage pageIndex: Int)
 }
 
 @objc(FLOPageViewController)
-public class PageViewController: NSViewController {
+public class FLOPageViewController: NSViewController {
     
-    @objc public weak var delegate: PageViewControllerDelegate?
+    @objc public weak var delegate: FLOPageViewControllerDelegate?
     
     fileprivate weak var pageController: _FLOPageController!
     fileprivate weak var pageControl: PageControl?
@@ -192,7 +192,7 @@ public class PageViewController: NSViewController {
     @objc
     public func pageControlDidChangeSelection(_ sender: PageControl) {
         self.selectedPage = Int(sender.selectedPage)
-        self.notifyDelegate()
+//        self.notifyDelegate()
     }
     
 // MARK: - Arrow Controls
@@ -269,7 +269,7 @@ public class PageViewController: NSViewController {
         case .right:
             self.pageController.navigateForward(nil)
         }
-        self.notifyDelegate()
+//        self.notifyDelegate()
     }
     
 // MARK: - Appearance + Behavior
@@ -395,7 +395,7 @@ public class PageViewController: NSViewController {
         } else {
             self.pageController.navigateBack(nil)
         }
-        self.notifyDelegate()
+//        self.notifyDelegate()
     }
     
     @objc
@@ -405,7 +405,7 @@ public class PageViewController: NSViewController {
         } else {
             self.pageController.navigateForward(nil)
         }
-        self.notifyDelegate()
+//        self.notifyDelegate()
     }
     
     @objc
@@ -428,7 +428,7 @@ public class PageViewController: NSViewController {
     
 }
 
-extension PageViewController: NSPageControllerDelegate {
+extension FLOPageViewController: NSPageControllerDelegate {
     
     public func pageController(_ pageController: NSPageController, identifierFor object: Any) -> NSPageController.ObjectIdentifier {
         guard let number = object as? NSNumber else { fatalError("The arrangedObjects array has been changed manually. This is not allowed! Please use the viewControllers array to manage the pages.") }
@@ -456,7 +456,7 @@ extension PageViewController: NSPageControllerDelegate {
     
 }
 
-extension PageViewController {
+extension FLOPageViewController {
     
     func debugQuickLookObject() -> AnyObject {
         return self.view

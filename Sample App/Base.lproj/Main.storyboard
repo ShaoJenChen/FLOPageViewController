@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="18122"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -642,7 +643,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="FLOPageViewController" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="FLOPageViewControllerSample" customModuleProvider="target"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
@@ -651,7 +652,7 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="FLOPageViewController" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" title="FLOPageViewController" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
@@ -671,7 +672,7 @@
         <!--View Controller-->
         <scene sceneID="xJG-Sf-nv7">
             <objects>
-                <viewController id="J7t-nv-2Ex" customClass="ViewController" customModule="FLOPageViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="J7t-nv-2Ex" customClass="ViewController" customModule="FLOPageViewControllerSample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="3ia-jr-TXD">
                         <rect key="frame" x="0.0" y="0.0" width="505" height="413"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -793,7 +794,7 @@
         <!--Page View Controller-->
         <scene sceneID="e2F-qg-8th">
             <objects>
-                <viewController id="KDc-7X-CoC" customClass="FLOPageViewController" sceneMemberID="viewController">
+                <viewController id="KDc-7X-CoC" customClass="FLOPageViewController" customModule="FLOPageViewController" sceneMemberID="viewController">
                     <view key="view" id="vIN-ee-Evg">
                         <rect key="frame" x="0.0" y="0.0" width="505" height="296"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -807,12 +808,12 @@
         <scene sceneID="FlZ-4J-r7k">
             <objects>
                 <viewController storyboardIdentifier="1" id="97s-g8-24r" sceneMemberID="viewController">
-                    <view key="view" id="tAK-dp-pvz" customClass="ColoredView" customModule="FLOPageViewController" customModuleProvider="target">
+                    <view key="view" id="tAK-dp-pvz" customClass="ColoredView" customModule="FLOPageViewControllerSample" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="505" height="296"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ydZ-Te-4LI">
-                                <rect key="frame" x="245" y="133" width="16" height="31"/>
+                                <rect key="frame" x="245" y="133" width="16" height="30"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="1" id="AgQ-OM-ZrF">
                                     <font key="font" metaFont="system" size="26"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -839,12 +840,12 @@
         <scene sceneID="Xl9-Th-CWh">
             <objects>
                 <viewController storyboardIdentifier="2" id="Mpe-ba-De7" sceneMemberID="viewController">
-                    <view key="view" id="GjO-qT-ziO" customClass="ColoredView" customModule="FLOPageViewController" customModuleProvider="target">
+                    <view key="view" id="GjO-qT-ziO" customClass="ColoredView" customModule="FLOPageViewControllerSample" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="505" height="296"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ec3-Bg-x5V">
-                                <rect key="frame" x="243" y="133" width="20" height="31"/>
+                                <rect key="frame" x="243" y="133" width="20" height="30"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="2" id="sg7-Up-F3e">
                                     <font key="font" metaFont="system" size="26"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -871,12 +872,12 @@
         <scene sceneID="aTj-84-hc5">
             <objects>
                 <viewController storyboardIdentifier="3" id="mq8-gx-5c3" sceneMemberID="viewController">
-                    <view key="view" id="pmn-bm-Ksr" customClass="ColoredView" customModule="FLOPageViewController" customModuleProvider="target">
+                    <view key="view" id="pmn-bm-Ksr" customClass="ColoredView" customModule="FLOPageViewControllerSample" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="505" height="296"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WaQ-hn-ARf">
-                                <rect key="frame" x="243" y="133" width="20" height="31"/>
+                                <rect key="frame" x="243" y="133" width="20" height="30"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="3" id="mwm-dU-mAv">
                                     <font key="font" metaFont="system" size="26"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
